@@ -1,0 +1,17 @@
+<h1>New Friend</h1>
+
+<%= form_tag "/friends/#{@friend["id"]}", method: :patch do %>
+  <div>
+    <%= label_tag :character %>
+    <%= text_field_tag :character, @friend.first_name %>
+  </div>
+  <div>
+    <%= label_tag :quote %>
+    <%= text_field_tag :quote, @friend.quote %>
+  </div>
+  <div>
+    <%= label_tag :location %>
+    <%= text_field_tag :location, @friend.location %>
+  </div>
+  <%= submit_tag "Update Friend" %>
+<% end %>

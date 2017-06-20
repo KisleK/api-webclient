@@ -1,0 +1,1 @@
+json.partial! @friend, partial: "friend", as: :friend

@@ -1,0 +1,12 @@
+<h1> Chicago Crimes </h1>
+
+<% @crimes.each do |crime| %>
+  <h2> Crime: <%= crime["primary_type"] %> </h2>
+  <h3> Domestic: <%= crime["domestic"] %> </h3>
+  <h3> Arrest: <%= crime["arrest"] %> </h3>
+  <h3> Year: <%= crime["year"] %> </h3>
+  <h3> Location: <%= crime["location"]["latitude"] %> </h3>
+  
+
+  <br>
+<% end %>

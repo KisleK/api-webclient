@@ -1,0 +1,9 @@
+<h1>Friends</h1>
+
+<% @friends.each do |friend| %>
+  <h2><a href="/friends/<%= friend.id %>"><%= friend.character %></a></h2>
+  <br>
+<% end %>
+
+<%= link_to "New friend", "/friends/new" %>
+

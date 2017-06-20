@@ -1,0 +1,30 @@
+<form action="/" method="get">
+  City: <input type="text" name="city">
+  State: <input type="text" name="state">
+  <input type="submit" value="Find Weather">
+  
+</form>
+
+
+
+<h1> Location: <%= "#{@city}, #{@state}" %> </h1>
+
+<h3>Current temperature: <%= @temperature %>° <%= @temp_unit %> </h3>
+
+
+<img src="<%= @image %>">
+
+
+<% @forecasts.each do |forecast| %>
+
+
+  <div>
+    <h2><%= forecast["day"] %> - <%= forecast["date"] %></h2>
+    <ul>
+      High: <%= forecast["high"] %>
+      Low: <%= forecast["low"] %>
+      Condition: <%= forecast["text"] %>
+    </ul>
+  </div>
+  
+<% end %>
